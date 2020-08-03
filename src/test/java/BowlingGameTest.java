@@ -25,5 +25,11 @@ public class BowlingGameTest {
         assertEquals(64, result);
     }
 
-    
+    @Test
+    void should_get_scores_when_not_last_frame_strike_and_spare() {
+        String[] scores = { "10-0", "5-5", "1-2", "3-4", "1-2", "3-4", "1-2", "3-4", "1-2", "3-4" };
+        int result = new BowlingGame().caclScores(scores);
+        assertEquals(75, result);
+    }
+
 }
