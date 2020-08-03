@@ -24,7 +24,14 @@ public class BowlingGame {
                 if (hit1 == 10) {
                     isStriking = true;
                 } else {
-                    totalScores += 10 + hit2;
+                    // 第十轮补中
+                    if (i == 9) {
+                        int extra = Integer.parseInt(scores[i + 1].split("-")[0]);
+                        totalScores += 10 + extra;
+                        i++;
+                    } else {
+                        totalScores += 10 + hit2;
+                    }
                     System.out.println("补中：第" + (i + 1) + "轮得分为：" + (10 + hit2));
                 }
             } else {

@@ -39,5 +39,11 @@ public class BowlingGameTest {
         assertEquals(14, result);
     }
 
+    @Test
+    void should_get_scores_when_last_frame_spare() {
+        String[] scores = { "0-0", "0-0", "0-0", "0-0", "0-0", "0-0", "0-0", "0-0", "0-0", "3-7", "5-0" };
+        int result = new BowlingGame().caclScores(scores);
+        assertEquals(15, result);
+    }
 
 }
