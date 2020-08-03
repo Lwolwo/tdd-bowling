@@ -32,4 +32,12 @@ public class BowlingGameTest {
         assertEquals(75, result);
     }
 
+    @Test
+    void should_get_scores_when_last_frame_strike() {
+        String[] scores = { "0-0", "0-0", "0-0", "0-0", "0-0", "0-0", "0-0", "0-0", "0-0", "10-0", "1-3" };
+        int result = new BowlingGame().caclScores(scores);
+        assertEquals(14, result);
+    }
+
+
 }
